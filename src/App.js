@@ -7,20 +7,21 @@ function App() {
   const [model, setModel] = useState(null);
 
   useEffect(() => {
+    console.log("Hello");
     async function loadModel() {
-      const loadedModel = await tf.loadLayersModel("model.json");
-      console.log("Hello");
+      const loadedModel = await tf.loadLayersModel("public/models/model.json");
+      console.log("Hello2");
       console.log(loadedModel);
       setModel(loadedModel);
     }
     loadModel();
   }, []);
-
+  //storage.googleapis.com/imageforgerymodelbucket/models/model.json
   // useEffect(() => {
   //   console.log(model);
   // }, [model]);
 
-  return (
+  https: return (
     <div className="App">
       <h1>Hello World</h1>
       {model ? (
