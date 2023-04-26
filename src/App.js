@@ -9,7 +9,9 @@ function App() {
   useEffect(() => {
     console.log("Hello");
     async function loadModel() {
-      const loadedModel = await tf.loadLayersModel("public/models/model.json");
+      const loadedModel = await tf.loadLayersModel(
+        "https://raw.githubusercontent.com/AltonDsilva3010/ImageForgery/master/src/assets/model/model.json"
+      );
       console.log("Hello2");
       console.log(loadedModel);
       setModel(loadedModel);
